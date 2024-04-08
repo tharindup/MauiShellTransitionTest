@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiShellTransitionTest.Pages.ModelessPage"
+             Shell.PresentationMode="Animated"
+             Title="ModelessPage">
+    <VerticalStackLayout>
+        <Label VerticalOptions="Start" HorizontalOptions="Fill"
+               BackgroundColor="Black" TextColor="White" FontSize="24"
+               HeightRequest="40" x:Name="Header" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <BoxView VerticalOptions="Fill" BackgroundColor="Transparent" />
+        <VerticalStackLayout
+                VerticalOptions="Center" 
+                HorizontalOptions="Fill"
+                BackgroundColor="White" Padding="20" Spacing="20" Margin="30">
+            <Button 
+                Text="Go to next page" HeightRequest="60"
+                VerticalOptions="Center" 
+                HorizontalOptions="Fill"
+                Clicked="NextButton_Clicked"/>
+            <Button 
+                Text="Go back"  HeightRequest="60"
+                VerticalOptions="Center" 
+                HorizontalOptions="Fill"
+                Clicked="BackButton_Clicked"/>
+        </VerticalStackLayout>
+        <BoxView VerticalOptions="FillAndExpand" BackgroundColor="Transparent" />
+    </VerticalStackLayout>
+</ContentPage>
